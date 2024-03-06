@@ -2,16 +2,18 @@ window.addEventListener("DOMContentLoaded", function() {
   // Создайте объект с текстами для каждого языка
   const texts = {
     en: {
-        header: "Juliana Svetlakova",
-        startText: "This is some English text.",
+        name: "Juliana Svetlakova",
+        startText: "Greetings! My name is ",
         scrollButton: "Scroll Down",
-        switchBtn: "En"
+        switchBtn: "En",
+        headProjects: "Projects",
     },
     ru: {
-        header: "Ульяна Светлакова",
-        startText: "Это некоторый текст на русском языке.",
+        name: "Ульяна Светлакова",
+        startText: "Привет! Меня зовут ",
         scrollButton: "Вниз",
-        switchBtn: "Ru"
+        switchBtn: "Ru",
+        headProjects: "Проекты",
     }
 };
 
@@ -76,4 +78,53 @@ function scrollToContent() {
   });
 }
 
+
+// Функция для открытия модального окна по его идентификатору
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+// Функция для закрытия модального окна по его идентификатору
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+
+// Закрыть модальное окно при клике на крестик или вне его
+window.onclick = function(event) {
+    var modals = document.querySelectorAll('.modal');
+    modals.forEach(function(modal) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+
+// Добавляем обработчик события клика на блоки
+var blocks = document.querySelectorAll('.block');
+blocks.forEach(function(block) {
+    block.addEventListener('click', function() {
+        var modalId = block.getAttribute('data-modal');
+        openModal(modalId);
+    });
 });
+
+
+// Закрыть модальное окно при клике на Esc
+window.onkeydown = function(event) {
+    if (event.key === "Escape") {
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function(modal) {
+            modal.style.display = "none";
+        });
+    }
+}
+
+
+}
+);
+
+
+
