@@ -1,1 +1,1 @@
-# ![CV](https://thejuliana.github.io/cv/)
+# [CV](https://thejuliana.github.io/cv/)
