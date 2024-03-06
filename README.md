@@ -1,2 +1,2 @@
 # cv
-My curriculum vitae
+![](https://github.io/cv)
