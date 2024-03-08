@@ -1,9 +1,17 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000000;
-  background-image: url(../images/scuffed-black-texture_dark.jpg);
-}
 
+
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #242424;
+  background-image: url(../images/scuffed-black-texture_dark.jpg);
+  padding: 0;
+}
+h2 {
+  padding-left: 35px;
+}
 .top-container {
   background-size: cover;
   background-color: transparent;
@@ -18,76 +26,108 @@ body {
   align-items: center;
   flex-grow: 1;
 }
-#startText {
-  color: white;
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
+.linkComp {
+  color: rgb(0, 0, 0); /* Цвет текста ссылки */
+  text-decoration:none; /* Подчеркивание ссылки */
 }
-#name {
-  color: rgb(255, 0, 0);
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-}
-.text-begin {
-  justify-content: center;
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
+.linkComp:hover {
+  color: #434343;
+  text-decoration:underline;
 }
 #startText {
-  color: white;
-  font-size: 40px;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
 }
 
-.header {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
+#name {
+  color: rgb(255, 192, 1);
+  font-size:64px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+#avatarImage {
+  align-self: flex-end;
+}
+.text-begin {
+  justify-content: start;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+}
+#startText {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+}
+#header {
+  font-weight: 800;
+  font-size: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.header {
+  border: 2px solid #ffffff;
+  background: #000000;
+  color: #f1f1f1;
+  height: 70px;
+  display:flex;
+}
+
+#hhead {
+  
+  margin-left: 16px;;
+  align-self: center;
+}
+
+
 .footer {
+  border: 2px solid #ffffff;
     padding: 10px 16px;
-    background: #555;
+    background: #000000;
     color: #f1f1f1;
 }
 
 .content {
   overflow: auto;
-  background-color: #000000;
+  background-color: #242424;
   color: white;
   padding: 16px;
-  margin-bottom: 102px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 102px;;
 }
 
 #projList {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap; 
 }
 
 .stick {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    inline-size: 100%;
+    margin-left: -10px;
 }
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  inline-size: 100%;
+  margin-left: -10px;
 }
 .stick + .content {
-    padding-bottom: 102px;
+  padding-bottom: 102px;
   }
-.sticky + .content {
-  padding-top: 102px;
-}
+
 .top-container img {
     max-height: 60%; /* Устанавливает максимальную ширину изображения равной ширине контейнера */
     width: auto; /* Позволяет изображению подстраиваться под изменение ширины */
@@ -96,24 +136,29 @@ body {
   }
 
 #scrollButton {
-margin-top: 10%;
-align-self: center;
-background-color: #f2ff00; /* Зеленый цвет фона */
-width: 100px;
-height: auto;
-color: rgb(0, 0, 0); /* Белый цвет текста */
-padding: 10px 20px; /* Отступы внутри кнопки */
-font-size: 16px; /* Размер шрифта */
-border: none; /* Убираем границу */
-cursor: pointer; /* Курсор при наведении */
-border-radius: 5px; /* Закругленные углы */
-transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+  background-color: #09090b; 
+  width: 200px;
+  height: auto;
+  color: rgb(121, 121, 121); /* Белый цвет текста */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  font-size: 16px; /* Размер шрифта */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Курсор при наведении */
+  border-radius: 5px; /* Закругленные углы */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+  box-shadow: inset 2px -2px 4px rgba(50, 50, 50, 0.411), inset -2px 2px 4px rgba(0, 0, 0, 0.718); 
 }
 
 #scrollButton:hover {
-background-color: #b15d0d; /* Темнозеленый цвет фона при наведении */
+  background-color: #0e0e10;
+  box-shadow: inset 2px -2px 4px rgba(0, 0, 0, 0.411), inset -2px 2px 4px rgba(69, 69, 69, 0.718); 
+  color: rgb(255, 192, 1);
 }
-
+#scrollButton:active {
+  transform: translateY(2px); /* Смещаем кнопку вниз при нажатии */
+  background-color: #040405;
+  box-shadow: inset 2px -2px 4px rgba(50, 50, 50, 0.411), inset -2px 2px 4px rgba(0, 0, 0, 0.718); 
+}
 #languageButton {
   position: absolute; /* Абсолютное позиционирование */
   top: 3%; /* Отступ сверху */
@@ -143,7 +188,7 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
   border: 0;
   color: #000000;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00E6F6;
+  box-shadow: 6px 0px 0px #d100f6;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -166,8 +211,8 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #f80d05, 3px 3px 0px #00E6F6;
+  background: linear-gradient(45deg, transparent 3%, #00c5f6 3%, #d100f6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #f80d05, 3px 3px 0px #d100f6;
   clip-path: var(--slice-0);
 }
 
@@ -225,20 +270,41 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
 
 
 
-#headProjects {
-  color: white;
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
+
+.logoName {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.info {
+  background-color: white;
+  color: black;
+  width: 95%;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#work, #education {
+  padding: 5%;
+}
+
+.logoComp {
+  block-size: 80px;
+  margin-right: 15px;
+  padding: 5px;;
+}
+
 
 
 /* Стили для модальных окон */
 .modal {
   display: none; /* Скрыть модальные окна по умолчанию */
- /*  z-index: 1000; */
-  /*position: fixed;*/
+  z-index: 1000; 
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -257,9 +323,10 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
   width: 80%;
 }
 #modalText {
+  padding-left: 15px;
+  padding-right: 15px;
   color: black;
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 10px;
 }
@@ -278,13 +345,112 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
 }
 
 .block {
+  border: 5px solid rgb(255, 255, 255);
+  height: 200px;
+  display: flex;
+  flex-direction: row;
   background-color: white;
   width: 45%; /* Устанавливаем ширину блока */
   float:inherit; /* Выравниваем блоки по левому краю */
-  margin: 2.5%; /* Добавляем немного отступов между блоками */
+  margin-left: 2.5%; /* Добавляем немного отступов между блоками */
+  margin-right: 2.5%;
+  margin-bottom: 2.5%; /* Добавляем немного отступов между блоками */
   box-sizing: border-box; /* Учитываем границы и поля внутри блока */
+  cursor: pointer; /* Изменение курсора при наведении */
+  transition: transform 0.3s ease; /* Плавное изменение размера */
+
+}
+.block:hover {
+  transform: scale(1.05); /* Увеличиваем размер на 5% при наведении */
+}
+.block:active {
+  transform: scale(0.95); /* Уменьшаем размер на 5% при нажатии */
+}
+.contentBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+#icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: start;
+}
+#phone {
+  padding-right:3%;
 }
 
+#git, #telegram, #linkedin {
+  block-size: 30px;
+  margin: 5px;
+  transition: transform 0.3s ease; 
+}
+
+#git:hover, #telegram:hover, #linkedin:hover {
+  transform: scale(1.1); 
+}
+
+#git:active, #telegram:active, #linkedin:active {
+  transform: scale(0.9);
+}
+
+#underProject {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#link {
+  block-size: 12px;
+  padding: 10px;
+}
+#linkToProjects {
+  padding-left: 15px;
+  color: rgb(0, 0, 0); /* Цвет текста ссылки */
+  text-decoration:none; /* Подчеркивание ссылки */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+#linkBlock {
+  transition: transform 0.3s ease; 
+}
+#linkBlock:hover {
+  transform: scale(1.025); /* Увеличиваем размер на 5% при наведении */
+}
+#linkBlock:active {
+  transform: scale(0.975); /* Уменьшаем размер на 5% при нажатии */
+}
+
+#linkToProjects:hover {
+  color: #2d2c2c;
+  text-decoration: underline;
+}
+
+#imProj1 {
+  width: 50%;
+ 
+}
+
+#imProj2 {
+  width: 25%;
+}
+
+#modalText {
+  font-size: 20px;
+}
 /* Медиа-запрос для маленьких экранов */
 @media (max-width: 768px) {
   .top-container {
@@ -292,19 +458,41 @@ background-color: #b15d0d; /* Темнозеленый цвет фона при 
       flex-direction: column;
   }
 
-  .text-begin {
-      margin-left: 0; /* Убираем отступ с левой стороны */
+  #phone {
+    padding-right: 7%;
   }
+
 
   #projList {
     flex-direction: column;
+    align-items: center;
   }
-  .block {
-/*     width: 100%;
- */  }
-
+  #projList .block {
+    width: 95%; /* Уменьшаем ширину блоков для мобильных устройств */
+    margin: 5px auto; /* Центрируем блоки по горизонтали с небольшим отступом  */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 100px;
+  }
+  .block { 
+    margin-left: 1%; /* Добавляем немного отступов между блоками */
+    margin-right: 1%;
+    margin-bottom: 1%; 
+  }
   .languageButton,
   .languageButton:after {
       margin-right: 10%;
+  }
+
+  #imProj1 {
+    width: 30%;
+   
+  }
+  
+  #imProj2 {
+    width: 20%;
+  }
+  #linkBlock {
+    margin-top: 4.5%;
   }
 }
