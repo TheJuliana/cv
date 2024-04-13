@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title >Juliana Svetlakova</title>
-        <script src="../cv/scripts/script.js"></script>
-        <link rel="stylesheet" type="text/css" href="../cv/src/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    </head>
-<body>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Juliana Svetlakova</title>
+    <script src="../cv/scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../cv/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
 
+<body>
 <div class="top-container">
     <div class="text-begin">
         <div id="welcomeText">
@@ -22,13 +23,16 @@
             <span id="name"  data-language="name">Ульяна Светлакова</span>
             <p style="color: red;">Сайт в разработке!</p>
           </h1>
-
         </div>
         <button id="scrollButton" onclick="scrollToContent()" data-language="header">Обо мне</button>
-
     </div>
-    <img id="avatarImage" src="images/avatar.png" alt="Your Image"> 
-    <button class="languageButton" id="languageButton" onclick="toggleLanguage()" data-language="switchBtn">Ru</button>
+
+    <div id="avatContainer">
+      <img id="avatarImage" src="images/avatar.png" alt="Your Image"> 
+    </div>
+
+   
+      <button class="languageButton" id="languageButton" data-language="switchBtn">Ru</button>
 
 </div>
 
@@ -137,6 +141,7 @@
         </div>
     </div>
   </div>
+
   <div class="info" id="linkBlock">
     <a id="linkToProjects" href="https://github.com/TheJuliana?tab=repositories">
       <div id="underProject">
@@ -146,7 +151,6 @@
     </a>
   </div>
 
-  
   
  
 </div>
@@ -169,5 +173,5 @@
     <div id="phone"><p >+79581691880</p></div>
   </div>
 
-</body>
+</div>
 </html>

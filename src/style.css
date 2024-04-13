@@ -1,150 +1,53 @@
-
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Предотвратить горизонтальный скролл */
+}
 
 
 body {
+  padding: 5%;
+  color: white;
   font-family: "Roboto Flex", sans-serif;
   font-size: 20px;
   font-weight: 300;
   background-color: #242424;
-  background-image: url(../images/scuffed-black-texture_dark.jpg);
-  padding: 0;
-}
-h2 {
-  padding-left: 35px;
-}
-.top-container {
   background-size: cover;
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 30px;
-  text-align: center;
-  height: 100vh; /* 100% высоты видимого экрана */
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  flex-grow: 1;
-}
-.linkComp {
-  color: rgb(0, 0, 0); /* Цвет текста ссылки */
-  text-decoration:none; /* Подчеркивание ссылки */
-}
-.linkComp:hover {
-  color: #434343;
-  text-decoration:underline;
-}
-#startText {
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 64px;
+  background-image: url(../images/scuffed-black-texture_dark.jpg);
 }
 
-#name {
-  color: rgb(255, 192, 1);
-  font-size:64px;
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-#avatarImage {
-  align-self: flex-end;
+
+
+.top-container {
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .text-begin {
-  justify-content: start;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: column;
-  align-content: start;
-}
-#startText {
-  color: white;
-  font-size: 40px;
-  font-weight: 400;
-  font-style: normal;
-}
-#header {
-  font-weight: 800;
-  font-size: 58px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-.header {
-  border: 2px solid #ffffff;
-  background: #000000;
-  color: #f1f1f1;
-  height: 70px;
-  display:flex;
-}
-
-#hhead {
-  
-  margin-left: 16px;;
+  position: absolute;
+  left: 0.2;
   align-self: center;
-}
-
-
-.footer {
-  border: 2px solid #ffffff;
-    padding: 10px 16px;
-    background: #000000;
-    color: #f1f1f1;
-}
-
-.content {
-  overflow: auto;
-  background-color: #242424;
-  color: white;
-  padding: 16px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 102px;;
+  align-items: center;
+  z-index: 1;
 }
 
-#projList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; 
-}
 
-.stick {
-    position: fixed;
-    bottom: 0;
-    inline-size: 100%;
-    margin-left: -10px;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  inline-size: 100%;
-  margin-left: -10px;
-}
-.stick + .content {
-  padding-bottom: 102px;
-  }
-
-.top-container img {
-    max-height: 60%; /* Устанавливает максимальную ширину изображения равной ширине контейнера */
-    width: auto; /* Позволяет изображению подстраиваться под изменение ширины */
-    display: block; /* Убирает пробелы вокруг изображения */
-    margin: 0 auto; /* Центрирует изображение внутри родительского контейнера */
-  }
 
 #scrollButton {
+  align-self: flex-start;
   background-color: #09090b; 
-  width: 200px;
+  width: 20%;
   height: auto;
-  color: rgb(121, 121, 121); /* Белый цвет текста */
-  padding: 10px 20px; /* Отступы внутри кнопки */
-  font-size: 16px; /* Размер шрифта */
-  border: none; /* Убираем границу */
-  cursor: pointer; /* Курсор при наведении */
-  border-radius: 5px; /* Закругленные углы */
+  color: rgb(121, 121, 121); 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 5px; 
   transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
   box-shadow: inset 2px -2px 4px rgba(50, 50, 50, 0.411), inset -2px 2px 4px rgba(0, 0, 0, 0.718); 
 }
@@ -159,30 +62,14 @@ h2 {
   background-color: #040405;
   box-shadow: inset 2px -2px 4px rgba(50, 50, 50, 0.411), inset -2px 2px 4px rgba(0, 0, 0, 0.718); 
 }
-#languageButton {
-  position: absolute; /* Абсолютное позиционирование */
-  top: 3%; /* Отступ сверху */
-  right: 3%; /* Отступ справа */
-  background-color: #5858582b; 
-  width: auto;
-  height: auto;
-  color: rgb(0, 0, 0); 
-  padding: 10px 20px; 
-  font-size: 16px; 
-  border: none; 
-  cursor: pointer; 
-  border-radius: 5px; 
-  transition: background-color 0.3s ease;
-}
 
-          
+
+
+      
 .languageButton,
-.languageButton:after {
-  /* align-self: flex-end;  */
-  width: auto;
-  height: auto;
-  line-height: auto;
-  font-size: 10px;
+.languageButton:after { 
+  z-index: 2;
+  align-self: self-start;
   font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(45deg, transparent 5%, #ffc001 5%);
   border: 0;
@@ -191,9 +78,18 @@ h2 {
   box-shadow: 6px 0px 0px #d100f6;
   outline: transparent;
   position: relative;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
+  top: 3%; 
+  right: 3%; 
+  background-color: #5858582b; 
+  color: rgb(0, 0, 0); 
+  padding: 10px 20px; 
+  font-size: 24px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease;
+
 }
 
 .languageButton:after {
@@ -203,7 +99,6 @@ h2 {
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-  
   content: 'ALTERNATE TEXT';
   display: block;
   position: absolute;
@@ -220,6 +115,7 @@ h2 {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
+
 
 @keyframes glitch {
   0% {
@@ -269,7 +165,14 @@ h2 {
 }
 
 
-
+#avatarImage {
+  position: absolute;
+  height: 80%;
+  width: auto;
+  bottom: 0;
+  right: 0;
+  z-index: 0; /* Чтобы изображение было под текстом */
+}
 
 .logoName {
   margin-bottom: 10px;
@@ -282,20 +185,61 @@ h2 {
 .info {
   background-color: white;
   color: black;
-  width: 95%;
   align-self: center;
   display: flex;
   flex-wrap: wrap;
 }
 
-#work, #education {
+#work, #education, #linkBlock {
   padding: 5%;
 }
 
 .logoComp {
   block-size: 80px;
   margin-right: 15px;
-  padding: 5px;;
+  padding: 5px;
+}
+
+.linkComp {
+  color: rgb(0, 0, 0); /* Цвет текста ссылки */
+  text-decoration:none; /* Подчеркивание ссылки */
+}
+.linkComp:hover {
+  color: #434343;
+  text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+#hhead {
+  margin-block: 0;
+  margin-block-start: 5vw;
+}
+.sticky {
+  top: 0;
+}
+
+.stick {
+  bottom: 0;
+}
+
+.sticky, .stick {
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #000000;
+  position: fixed;
+  inline-size: 100%;
+  margin: -5%;
+  padding: 2%;
+  max-height: 100px;
+}
+.content {
+  padding-bottom: 5%;
 }
 
 
@@ -344,17 +288,28 @@ h2 {
   cursor: pointer;
 }
 
+#projList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+#imProj1, #imProj2{
+  height: 100%;
+  width: auto;
+}
+
 .block {
   border: 5px solid rgb(255, 255, 255);
   height: 200px;
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 45%; /* Устанавливаем ширину блока */
-  float:inherit; /* Выравниваем блоки по левому краю */
-  margin-left: 2.5%; /* Добавляем немного отступов между блоками */
-  margin-right: 2.5%;
-  margin-bottom: 2.5%; /* Добавляем немного отступов между блоками */
+  width: 48%; /* Устанавливаем ширину блока */
   box-sizing: border-box; /* Учитываем границы и поля внутри блока */
   cursor: pointer; /* Изменение курсора при наведении */
   transition: transform 0.3s ease; /* Плавное изменение размера */
@@ -376,123 +331,77 @@ h2 {
   flex-direction: column;
   padding: 15px;
 }
-#icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-self: center;
-  justify-content: start;
-}
-#phone {
-  padding-right:3%;
+
+#linkBlock {
+  margin-top: 2%;
+  padding: 0;
 }
 
-#git, #telegram, #linkedin {
-  block-size: 30px;
-  margin: 5px;
-  transition: transform 0.3s ease; 
-}
 
-#git:hover, #telegram:hover, #linkedin:hover {
-  transform: scale(1.1); 
+#linkToProjects {
+  width: 100%;
 }
-
-#git:active, #telegram:active, #linkedin:active {
-  transform: scale(0.9);
-}
-
 #underProject {
-display: flex;
-flex-direction: row;
-align-items: center;
-}
-.footer {
+  flex-wrap: nowrap;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: flex-start;
+}
+#more {
+  padding-left: 3%;
 }
 #link {
-  block-size: 12px;
-  padding: 10px;
+  padding-left: 5px;
+  max-width: 20px;
+  height: 20px;
+  align-self: center;
 }
-#linkToProjects {
-  padding-left: 15px;
-  color: rgb(0, 0, 0); /* Цвет текста ссылки */
-  text-decoration:none; /* Подчеркивание ссылки */
+
+.footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-#linkBlock {
+#phone {
+  padding-right: 5%;
+  padding-bottom: 3%;
+}
+#icons {
+  padding-bottom: 3%;
+}
+#git, #telegram, #linkedin {
+  max-width: 50px;
+  height: auto;
+  padding: 5px;
   transition: transform 0.3s ease; 
 }
-#linkBlock:hover {
-  transform: scale(1.025); /* Увеличиваем размер на 5% при наведении */
-}
-#linkBlock:active {
-  transform: scale(0.975); /* Уменьшаем размер на 5% при нажатии */
-}
 
-#linkToProjects:hover {
-  color: #2d2c2c;
-  text-decoration: underline;
-}
-
-#imProj1 {
-  width: 50%;
- 
-}
-
-#imProj2 {
-  width: 25%;
-}
-
-#modalText {
-  font-size: 20px;
-}
-/* Медиа-запрос для маленьких экранов */
-@media (max-width: 800px) {
-  .top-container {
-      padding: 10px; /* Уменьшаем внешний отступ */
-      flex-direction: column;
+@media screen and (max-width: 500px) {
+  #avatarImage {
+    width: 80vw;
+    height: auto;
   }
-
-  #phone {
-    padding-right: 7%;
-  }
-
-
   #projList {
     flex-direction: column;
-    align-items: center;
-  }
-  #projList .block {
-    width: 95%; /* Уменьшаем ширину блоков для мобильных устройств */
-    margin: 5px auto; /* Центрируем блоки по горизонтали с небольшим отступом  */
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 100px;
-  }
-  .block { 
-    margin-left: 1%; /* Добавляем немного отступов между блоками */
-    margin-right: 1%;
-    margin-bottom: 1%; 
-  }
-  .languageButton,
-  .languageButton:after {
-      margin-right: 10%;
+    justify-content: space-between;
   }
 
-  #imProj1 {
-    width: 30%;
-   
+  #git, #telegram, #linkedin {
+    max-width: 40px;
   }
-  
-  #imProj2 {
-    width: 20%;
+
+  .block {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
   }
-  #linkBlock {
-    margin-top: 4.5%;
+
+
+  #imProj1, #imProj2{
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 }
