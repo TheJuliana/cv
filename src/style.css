@@ -89,7 +89,7 @@ body {
   cursor: pointer; 
   border-radius: 5px; 
   transition: background-color 0.3s ease;
-
+  margin: -3%;
 }
 
 .languageButton:after {
@@ -235,8 +235,11 @@ body {
   position: fixed;
   inline-size: 100%;
   margin: -5%;
-  padding: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
   max-height: 100px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 .content {
   padding-bottom: 5%;
@@ -258,6 +261,10 @@ body {
 }
 #modal1, #modal2 {
   color: black;
+}
+#knit2, #bee2 {
+  max-width: 60%;
+  height: auto;
 }
 .modal-content {
   background-color: #fefefe;
@@ -335,12 +342,28 @@ body {
 #linkBlock {
   margin-top: 2%;
   padding: 0;
+  transition: transform 0.3s ease; 
+}
+
+#linkBlock:hover {
+  transform: scale(1.025); /* Увеличиваем размер на 5% при наведении */
+}
+#linkBlock:active {
+  transform: scale(0.975); /* Уменьшаем размер на 5% при нажатии */
 }
 
 
 #linkToProjects {
   width: 100%;
+  color: rgb(0, 0, 0); /* Цвет текста ссылки */
+  text-decoration:none; /* Подчеркивание ссылки */
 }
+
+#linkToProjects:hover {
+  color: #2d2c2c;
+  text-decoration: underline;
+}
+
 #underProject {
   flex-wrap: nowrap;
   display: flex;
@@ -361,22 +384,42 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 5%;
+
 }
 #phone {
   padding-right: 5%;
-  padding-bottom: 3%;
 }
-#icons {
-  padding-bottom: 3%;
-}
+
 #git, #telegram, #linkedin {
   max-width: 50px;
   height: auto;
   padding: 5px;
   transition: transform 0.3s ease; 
 }
+#git:hover, #telegram:hover, #linkedin:hover {
+  transform: scale(1.1); 
+}
 
+#git:active, #telegram:active, #linkedin:active {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 1000px) {
+  .contentBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #knit2, #bee2 {
+    max-width: 100%;
+    height: auto;
+  }
+}
 @media screen and (max-width: 500px) {
+  .content {
+    padding-bottom: 18%;
+  }
   #avatarImage {
     width: 80vw;
     height: auto;
@@ -397,6 +440,8 @@ body {
     flex-wrap: wrap;
     height: auto;
   }
+
+
 
 
   #imProj1, #imProj2{
