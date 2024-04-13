@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
   const texts = {
     en: {
         name: "Juliana Svetlakova",
-        startText: "Greetings! My name is ",
+        startText: "Greetings! I'm",
         scrollButton: "Scroll Down",
         switchBtn: "En",
         header: "About me",

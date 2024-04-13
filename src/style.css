@@ -35,12 +35,18 @@ body {
   z-index: 1;
 }
 
+#header {
+  display: flex;
+  flex-direction: column;
+}
 
-
+#name {
+  color:#d100f6;
+}
 #scrollButton {
   align-self: flex-start;
   background-color: #09090b; 
-  width: 20%;
+  width: 40%;
   height: auto;
   color: rgb(121, 121, 121); 
   padding: 10px 20px; 
@@ -213,9 +219,6 @@ body {
 
 
 
-
-
-
 #hhead {
   margin-block: 0;
   margin-block-start: 5vw;
@@ -279,13 +282,14 @@ body {
   color: black;
   font-weight: 300;
   font-style: normal;
-  font-size: 10px;
 }
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: -10px;
+  margin-top: -15px;
 }
 
 .close:hover,
