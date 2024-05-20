@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", function() {
         contacts: "Contacts",
         proj1: "KNIT - An online store mobile app made with Flutter",
         proj2: "BeeSmart - Android app",
+        proj3: "CatCouture - online pet shop with Flutter powered by Firebase",
         exp: "Work experience",
         desc1: "A startup to create software for blind people in the city of Kaliningrad",
         duration1: "Period of employment: ",
@@ -44,7 +45,11 @@ window.addEventListener("DOMContentLoaded", function() {
         bee2: "This application is a charades on the topic of physics. In this way you can test your knowledge of physical formulas and notations. That is when I was introduced to mobile development and the Java language.",   
         bee3: "A lot of things have been forgotten since then, but that's why I still keep this project on Github, because that way I can always look at my code and remember everything I did before.",
         bee4: "It was a bit complicated for the time, but quite interesting and unusual.",
-        more: "More projects"
+        more: "More projects",
+        cat1: "This application is still in development.",
+        cat2: "I decided to explore the backend side of Flutter and my choice was Firebase: firestore database, authentication and cloud storage modules are connected.",
+        cat3: "Structure of the firestore database: *in development*",
+        cat4: "After this project, I learnt how to make full-fledged applications with a cloud database.",
     },
     ru: {
         name: "Ульяна Светлакова",

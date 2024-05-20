@@ -262,10 +262,10 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#modal1, #modal2 {
+#modal1, #modal2, #modal3 {
   color: black;
 }
-#knit2, #bee2 {
+#knit2, #bee2, #catcouture {
   max-width: 60%;
   height: auto;
 }
@@ -314,7 +314,7 @@ body {
   width: 100%;
 }
 
-#imProj2{
+#imProj2, #imProj3{
   height: auto;
   width: 40%;
 }
@@ -330,7 +330,6 @@ body {
   box-sizing: border-box; /* Учитываем границы и поля внутри блока */
   cursor: pointer; /* Изменение курсора при наведении */
   transition: transform 0.3s ease; /* Плавное изменение размера */
-
 }
 .block:hover {
   transform: scale(1.05); /* Увеличиваем размер на 5% при наведении */
@@ -415,6 +414,12 @@ body {
   transform: scale(0.9);
 }
 
+@media screen and (min-width: 820px) {
+  #bottom {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .contentBlock {
     display: flex;
@@ -426,7 +431,7 @@ body {
     width: 70%;
   }
 
-  #imProj2{
+  #imProj2, #imProj3{
     height: auto;
     width: 80%;
   }
@@ -448,7 +453,7 @@ body {
     width: 60%;
   }
 
-  #imProj2{
+  #imProj2, #imProj3{
     height: auto;
     width: 80%;
   }
@@ -491,7 +496,7 @@ body {
     width: 100%;
   }
   
-  #imProj2{
+  #imProj2, #imProj3{
     height: auto;
     width: 100%;
   }
